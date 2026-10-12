@@ -58,12 +58,14 @@
       .link      { color: #6fb0ff !important; }
       .accent    { color: #6fb0ff !important; }
       .btn-outline-td { border-color: #6fb0ff !important; }
+      .coupon-box { background-color: #181c22 !important; border-color: #6fb0ff !important; }
       .btn-outline-link { color: #6fb0ff !important; }
     }
     [data-ogsb] .bg-page   { background-color: #0f1216 !important; }
     [data-ogsb] .bg-card   { background-color: #181c22 !important; }
     [data-ogsb] .bg-soft   { background-color: #20252d !important; }
     [data-ogsb] .bg-footer { background-color: #20242a !important; }
+    [data-ogsb] .coupon-box { background-color: #181c22 !important; }
     [data-ogsc] .text-main { color: #f1f3f5 !important; }
     [data-ogsc] .text-body { color: #c9ced6 !important; }
     [data-ogsc] .text-muted{ color: #9aa3ae !important; }
@@ -75,7 +77,7 @@
 
   <!-- Preheader -->
   <div style="display:none;font-size:1px;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;mso-hide:all;">
-    Enjoy an extra 10% off any plan. Offer valid until {{offer_valid_till}}.
+    Use code WELCOMEBACK10 at checkout for an extra 10% off. Valid until {{offer_valid_till}}.
     &#8199;&#847;&#8199;&#847;&#8199;&#847;&#8199;&#847;&#8199;&#847;&#8199;&#847;&#8199;&#847;&#8199;&#847;&#8199;&#847;&#8199;&#847;
   </div>
 
@@ -89,7 +91,7 @@
 
           <!-- Logo (centered) -->
           <tr>
-            <td align="center" class="px" style="padding:32px 40px 0;">
+            <td align="center" class="px" style="padding:24px 40px 0;">
               <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
                 <tr>
                   <td align="center" style="padding:0;">
@@ -103,8 +105,8 @@
 
           <!-- Heading -->
           <tr>
-            <td class="px" align="center" style="padding:28px 40px 8px;">
-              <h1 class="h1 text-main" style="margin:0;font-size:24px;line-height:32px;font-weight:700;color:#172b4d;">
+            <td class="px" align="center" style="padding:20px 40px 6px;">
+              <h1 class="h1 text-main" style="margin:0;font-size:22px;line-height:30px;font-weight:700;color:#172b4d;">
                 We'd love to have you back
               </h1>
             </td>
@@ -112,7 +114,7 @@
 
           <!-- Intro -->
           <tr>
-            <td class="px lead text-body" align="center" style="padding:12px 40px 24px;font-size:14px;line-height:22px;color:#44506a;">
+            <td class="px lead text-body" align="center" style="padding:8px 40px 18px;font-size:13px;line-height:22px;color:#44506a;">
               Hi {{first_name}}, we noticed your <strong class="text-main" style="color:#172b4d;">{{plan_name}}</strong>
               subscription wasn't renewed. To make coming back easier, here's something extra from us.
             </td>
@@ -120,22 +122,29 @@
 
           <!-- Offer card -->
           <tr>
-            <td class="px" style="padding:0 40px 24px;">
+            <td class="px" style="padding:0 40px 20px;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
                      class="bg-soft border" style="background-color:#f6f8fa;border:1px solid #e1e5ea;border-radius:10px;">
                 <tr>
-                  <td align="center" class="card-pad" style="padding:24px 20px;">
-                    <p class="text-muted" style="margin:0;font-size:11px;line-height:16px;letter-spacing:0.8px;text-transform:uppercase;color:#6b7684;font-weight:700;">
-                      Your welcome-back offer
-                    </p>
-                    <p class="accent" style="margin:8px 0 0;font-size:34px;line-height:40px;font-weight:700;color:#1769d2;">
+                  <td align="center" class="card-pad" style="padding:18px 20px;">
+                    <p class="accent" style="margin:0;font-size:26px;line-height:32px;font-weight:700;color:#1769d2;">
                       Extra 10% off
                     </p>
-                    <p class="text-body" style="margin:6px 0 0;font-size:13px;line-height:20px;color:#44506a;">
-                      on your next plan with Mantra
+                    <p class="text-body" style="margin:4px 0 12px;font-size:13px;line-height:20px;color:#44506a;">
+                      Use this code at checkout
                     </p>
+
+                    <!-- Coupon code -->
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
+                      <tr>
+                        <td align="center" class="coupon-box" bgcolor="#ffffff" style="background-color:#ffffff;border:2px dashed #1769d2;border-radius:8px;padding:8px 22px;">
+                          <span class="text-main" style="font-family:'Courier New',Courier,monospace;font-size:18px;line-height:24px;font-weight:700;letter-spacing:2px;color:#172b4d;">WELCOMEBACK10</span>
+                        </td>
+                      </tr>
+                    </table>
+
                     <p class="text-muted" style="margin:12px 0 0;font-size:12px;line-height:18px;color:#6b7684;">
-                      Valid until {{offer_valid_till}}
+                      Choose a plan, then enter the code on the checkout page.<br>Valid until {{offer_valid_till}}.
                     </p>
                   </td>
                 </tr>
@@ -145,7 +154,7 @@
 
           <!-- Primary CTA -->
           <tr>
-            <td class="px" align="center" style="padding:0 40px 32px;">
+            <td class="px" align="center" style="padding:0 40px 24px;">
               <!--[if mso]>
               <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
                 href="https://web.mantracare.com/therapy" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="17%" stroke="f" fillcolor="#1769d2">
@@ -170,25 +179,16 @@
 
           <!-- Feedback section -->
           <tr>
-            <td class="px" style="padding:0 40px 40px;">
+            <td class="px" style="padding:0 40px 28px;">
               <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td class="border" align="center" style="border-top:1px solid #e1e5ea;padding:28px 0 0;">
+                  <td class="border" align="center" style="border-top:1px solid #e1e5ea;padding:20px 0 0;">
                     <p class="text-main" style="margin:0;font-size:15px;line-height:22px;font-weight:700;color:#172b4d;">
                       Not planning to renew?
                     </p>
-                    <p class="text-body" style="margin:6px 0 18px;font-size:13px;line-height:20px;color:#44506a;">
+                    <p class="text-body" style="margin:4px 0 14px;font-size:13px;line-height:20px;color:#44506a;">
                       That's completely okay. Tell us what didn't work for you so we can do better.
                     </p>
-
-                    <!--[if mso]>
-                    <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word"
-                      href="{{feedback_url}}" style="height:44px;v-text-anchor:middle;width:220px;" arcsize="17%" strokecolor="#1769d2" strokeweight="1pt" fillcolor="#ffffff">
-                      <w:anchorlock/>
-                      <center style="color:#1769d2;font-family:Arial,sans-serif;font-size:14px;font-weight:bold;">Share feedback</center>
-                    </v:roundrect>
-                    <![endif]-->
-                    <!--[if !mso]><!-->
                     <table role="presentation" class="btn-table" cellpadding="0" cellspacing="0" border="0" align="center">
                       <tr>
                         <td align="center" class="btn-outline-td" style="border:1px solid #1769d2;border-radius:8px;">
@@ -213,12 +213,12 @@
 
                 <!-- Logo (centered) -->
                 <tr>
-                  <td align="center" class="px" style="padding:32px 28px 0;">
+                  <td align="center" class="px" style="padding:22px 28px 0;">
                     <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center">
                       <tr>
                         <td align="center" style="padding:0;">
-                          <img src="https://web.mantracare.com/MantraLogo.svg" width="110" alt="Mantra"
-                               style="display:block;width:110px;max-width:110px;height:auto;border:0;">
+                          <img src="https://web.mantracare.com/MantraLogo.svg" width="96" alt="Mantra"
+                               style="display:block;width:96px;max-width:96px;height:auto;border:0;">
                         </td>
                       </tr>
                     </table>
@@ -227,10 +227,10 @@
 
                 <!-- Sent to -->
                 <tr>
-                  <td class="px" align="center" style="padding:24px 28px 0;">
+                  <td class="px" align="center" style="padding:16px 28px 0;">
                     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tr>
-                        <td class="border text-muted wrap-text" align="center" style="border-top:1px solid #d5dae1;padding:20px 0 0;font-size:12px;line-height:20px;color:#8a94a1;">
+                        <td class="border text-muted wrap-text" align="center" style="border-top:1px solid #d5dae1;padding:14px 0 0;font-size:12px;line-height:20px;color:#8a94a1;">
                           This message was sent to
                           <a class="link" href="mailto:{{email}}" style="color:#1769d2;text-decoration:none;">{{email}}</a>.
                           If you have questions or complaints, please
@@ -244,9 +244,9 @@
                 <!-- Links -->
                 <tr>
                   <td class="px" align="center" style="padding:20px 28px 0;font-size:12px;line-height:22px;">
-                    <a class="text-main" href="https://mantra.care/terms-of-use/" target="_blank" style="color:#172b4d;font-weight:700;text-decoration:none;white-space:nowrap;">Terms of Use</a>
+                    <a class="text-main" href="https://mantracare.com/terms/" target="_blank" style="color:#172b4d;font-weight:700;text-decoration:none;white-space:nowrap;">Terms of Use</a>
                     <span class="text-muted" style="color:#b4bbc4;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
-                    <a class="text-main" href="https://mantra.care/privacy-policy/" target="_blank" style="color:#172b4d;font-weight:700;text-decoration:none;white-space:nowrap;">Privacy Policy</a>
+                    <a class="text-main" href="https://mantracare.com/privacy-policy/" target="_blank" style="color:#172b4d;font-weight:700;text-decoration:none;white-space:nowrap;">Privacy Policy</a>
                     <span class="text-muted" style="color:#b4bbc4;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
                     <a class="text-main" href="https://content.mantracare.com/faq/" target="_blank" style="color:#172b4d;font-weight:700;text-decoration:none;white-space:nowrap;">FAQs</a>
                     <span class="text-muted" style="color:#b4bbc4;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
@@ -256,7 +256,7 @@
 
                 <!-- Copyright -->
                 <tr>
-                  <td class="px text-muted" align="center" style="padding:20px 28px 32px;font-size:11px;line-height:18px;color:#8a94a1;">
+                  <td class="px text-muted" align="center" style="padding:12px 28px 22px;font-size:11px;line-height:18px;color:#8a94a1;">
                     Copyright &copy; {{year}} Mantra
                   </td>
                 </tr>
